@@ -1,25 +1,20 @@
-import Link from 'next/link'
+import Head from 'next/head';
 
-export const Custom404 = (): JSX.Element => (
-	<div className="flex-container">
-		<div className="text-center">
-			<h1>
-				<span className="fade-in" id="digit1">
-					4
-				</span>
-				<span className="fade-in" id="digit2">
-					0
-				</span>
-				<span className="fade-in" id="digit3">
-					4
-				</span>
-			</h1>
-			<h3 className="fadeIn">PAGE NOT FOUND</h3>
-			<Link href="/dashboard" passHref>
-				<button type="button" name="button">
-					Return To Home
-				</button>
-			</Link>
-		</div>
-	</div>
-)
+
+function Error404() {
+	return (
+		<>
+			<Head>
+				<title>Аква термикс</title>
+				<meta charSet='UTF-8' />
+				<meta httpEquiv='X-UA-Compatible' content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel='icon' type='image/svg' sizes="32x32" href="/img/logo.svg" />
+			</Head>
+			<h1>Ошибка 404</h1>
+		</>
+	);
+}
+
+export default Error404;
+

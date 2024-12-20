@@ -11,7 +11,7 @@ function Catalog({ query }: { query: IQueryParams }) {
 
 	const getDefaultTextGenerator = useCallback(() => 'Каталог', [])
 
-	const getTextGenerator = useCallback((param: string) => ({})[param], [])
+	const getTextGenerator = useCallback((param: string) => param, [])
 
 	return (
 		<>

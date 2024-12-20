@@ -8,7 +8,7 @@ import { useCallback } from 'react'
 function Order() {
 	const getDefaultTextGenerator = useCallback(() => 'Оформление заказа', [])
 
-	const getTextGenerator = useCallback((param: string) => ({})[param], [])
+	const getTextGenerator = useCallback((param: string) => param, [])
 	const { shouldLoadContent } = useRedirectByUserCheck()
 	return (
 		<>

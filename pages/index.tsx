@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 
 function Auth() {
-	const { shouldLoadContent } = useRedirectByUserCheck(true)
+	const { shouldLoadContent } = useRedirectByUserCheck(true);
 	return (
 		<>
 			<Head>
@@ -16,7 +16,7 @@ function Auth() {
 			</Head>
 			{shouldLoadContent && <AuthPage />}
 		</>
-	)
+	);
 }
 
-export default Auth
+export default Auth;

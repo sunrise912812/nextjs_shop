@@ -77,9 +77,22 @@ export const CatalogFiltersDesktop = ({
 					disabled={spinner || resetFilterBtnDisabled}
 					onClick={applayFilters}
 				>
-					{spinner ? <span className={spinnerStyles.spinner} style={{ top: 6, left: '47%' }} /> : 'Показать'}
+					{spinner ? (
+						<span
+							className={spinnerStyles.spinner}
+							style={{ top: 6, left: '47%' }}
+						/>
+					) : (
+						'Показать'
+					)}
 				</button>
-				<button className={styles.filters__actions__reset} disabled={resetFilterBtnDisabled} onClick={resetFilters}>Сбросить</button>
+				<button
+					className={styles.filters__actions__reset}
+					disabled={resetFilterBtnDisabled}
+					onClick={resetFilters}
+				>
+					Сбросить
+				</button>
 			</div>
 		</div>
 	)

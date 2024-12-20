@@ -7,7 +7,7 @@ import { useCallback } from 'react'
 function Contacts() {
 	const getDefaultTextGenerator = useCallback(() => 'Контакты', [])
 
-	const getTextGenerator = useCallback((param: string) => ({})[param], [])
+	const getTextGenerator = useCallback((param: string) => param, [])
 
 	return (
 		<>

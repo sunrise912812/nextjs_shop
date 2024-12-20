@@ -1,4 +1,4 @@
-import { MultiValue, SingleValue } from 'react-select'
+import { MultiValue, SingleValue } from 'react-select';
 
 export interface IWrappedComponentProps {
 	open: boolean
@@ -21,7 +21,7 @@ export interface IAccordion {
 	callback?: (args0: boolean) => void
 }
 
-export type SelectOptionType = MultiValue<IOption> | SingleValue<IOption> | null
+export type SelectOptionType = MultiValue<IOption> | SingleValue<IOption> | null;
 
 export interface ILayoutProps {
 	children: React.ReactNode

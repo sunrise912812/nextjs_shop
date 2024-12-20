@@ -1,13 +1,13 @@
-import { Layout } from '@/components/layout/Layout'
-import AboutPage from '@/components/templates/AboutPage/AboutPage'
-import Head from 'next/head'
-import { Breadcrumbs } from '@/components/modules/Breadcrumbs/Breadcrumbs'
-import { useCallback } from 'react'
+import { Layout } from '@/components/layout/Layout';
+import AboutPage from '@/components/templates/AboutPage/AboutPage';
+import Head from 'next/head';
+import { Breadcrumbs } from '@/components/modules/Breadcrumbs/Breadcrumbs';
+import { useCallback } from 'react';
 
 function About() {
-	const getDefaultTextGenerator = useCallback(() => 'О компании', [])
+	const getDefaultTextGenerator = useCallback(() => 'О компании', []);
 
-	const getTextGenerator = useCallback((param: string) => ({})[param], [])
+	const getTextGenerator = useCallback((param: string) => param, []);
 
 	return (
 		<>
@@ -29,7 +29,7 @@ function About() {
 				</main>
 			</Layout>
 		</>
-	)
+	);
 }
 
-export default About
+export default About;

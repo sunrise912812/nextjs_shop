@@ -32,9 +32,8 @@ export const Accordion = ({
 					<motion.button
 						initial={false}
 						onClick={toggleAccordion}
-						className={cn(titleClass, {
-							[arrowOpenClass]: expanded && !isMobileForFilters,
-						})}
+						className={`${titleClass} ${expanded ? (isMobileForFilters ? '' : arrowOpenClass) : ''
+							}`}
 					>
 						{title}
 					</motion.button>

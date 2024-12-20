@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { ICrumbProps } from '@/types/common'
-import { CrumbArrowSVG } from '@/components/elements/CrumbArrowSVG/CrumbArrowSVG'
-import styles from '@/styles/breadcrumbs/index.module.scss'
-import { useUnit } from 'effector-react'
-import { $mode } from '@/context/mode'
-import cn from 'classnames'
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ICrumbProps } from '@/types/common';
+import { CrumbArrowSVG } from '@/components/elements/CrumbArrowSVG/CrumbArrowSVG';
+import styles from '@/styles/breadcrumbs/index.module.scss';
+import { useUnit } from 'effector-react';
+import { $mode } from '@/context/mode';
+import cn from 'classnames';
 
 export const Crumb = ({
 	text: defaultText,
@@ -13,23 +14,21 @@ export const Crumb = ({
 	href,
 	last = false,
 }: ICrumbProps) => {
-	const [text, setText] = useState(defaultText)
-	const mode = useUnit($mode)
-	const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
+	const [text, setText] = useState(defaultText);
+	const mode = useUnit($mode);
+	const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : '';
 
 	useEffect(() => {
-		handleTextGenerate()
-	}, [textGenerator])
+		handleTextGenerate();
+	}, [textGenerator]);
 
 	const handleTextGenerate = async () => {
-		// If `textGenerator` is nonexistent, then don't do anything
-		if (!Boolean(textGenerator)) {
-			return
+		if (!textGenerator) {
+			return;
 		}
-		// Run the text generator and set the text again
-		const finalText = await textGenerator()
-		setText(finalText)
-	}
+		const finalText = await textGenerator();
+		setText(finalText);
+	};
 
 	if (last) {
 		return (
@@ -44,7 +43,7 @@ export const Crumb = ({
 					{text}
 				</span>
 			</a>
-		)
+		);
 	}
 
 	return (
@@ -56,10 +55,8 @@ export const Crumb = ({
 				>
 					<CrumbArrowSVG />
 				</span>
-				<span className={styles.breadcrumbs__item__text}>
-					{text}
-				</span>
+				<span className={styles.breadcrumbs__item__text}>{text}</span>
 			</a>
 		</Link>
-	)
-}
+	);
+};

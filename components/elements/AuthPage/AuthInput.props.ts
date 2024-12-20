@@ -1,12 +1,12 @@
-import { ISignUpForm } from '@/components/modules/AuthPage/SignUpForm.interface'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
-import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-export interface AuthInputProps
-	extends DetailedHTMLProps<
-		HTMLAttributes<HTMLInputElement>,
-		HTMLInputElement
-	> {
-	register: UseFormRegister<ISignUpForm>
-	errors: FieldErrors<ISignUpForm>
+export interface IInputs {
+	name: string
+	email: string
+	password: string
+}
+
+export interface IAuthPageInput {
+	register: UseFormRegister<IInputs>
+	errors: FieldErrors<IInputs>
 }

@@ -1,11 +1,9 @@
-import { OnlineStroreContentProps } from './OnlineStoteContent.props'
-import cn from 'classnames'
 import styles from '@/styles/footer/index.module.scss'
 import Link from 'next/link'
 
-export const OnlineStoreContent = ({ className, props }: OnlineStroreContentProps): JSX.Element => {
+export const OnlineStoreContent = (): JSX.Element => {
 	return (
-		<ul className={cn(className, styles.footer__top__item__list)} {...props}>
+		<ul className={styles.footer__top__item__list}>
 			<li className={styles.footer__top__item__list__item}>
 				<Link href='/catalog' passHref className={styles.footer__top__item__list__item__link}>Каталог</Link>
 			</li>

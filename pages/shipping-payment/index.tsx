@@ -7,7 +7,7 @@ import { useCallback } from 'react'
 function ShippingPayment() {
 	const getDefaultTextGenerator = useCallback(() => 'Доставка и оплата', [])
 
-	const getTextGenerator = useCallback((param: string) => ({})[param], [])
+	const getTextGenerator = useCallback((param: string) => param, [])
 
 	return (
 		<>

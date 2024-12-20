@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { FooterProps } from './Footer.props'
 import cn from 'classnames'
 import styles from '@/styles/footer/index.module.scss'
 import { FooterLogo } from './FooterLogo'
@@ -12,12 +11,12 @@ import { MailSVG } from '@/components/elements/MailSVG/MailSVG'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { Accordion } from '@/components/elements/Accordion/Accordion'
 
-export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
+export const Footer = (): JSX.Element => {
 	const isMedia750 = useMediaQuery(750)
 	const isMedia500 = useMediaQuery(500)
 
 	return (
-		<footer className={cn(className, styles.footer)} {...props}>
+		<footer className={styles.footer}>
 			<div className={styles.footer__container}>
 				<div className={styles.footer__top}>
 					{!isMedia750 && <FooterLogo />}
@@ -38,7 +37,7 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
 									arrowOpenClass={styles.open}
 								>
 									<OnlineStoreContent />
-									<div style={{ height: '17px' }}></div>
+									<div style={{ height: '17px' }} />
 								</Accordion>
 							)}
 						</div>
@@ -56,7 +55,7 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
 									arrowOpenClass={styles.open}
 								>
 									<CompanyContent />
-									<div style={{ height: '17px' }}></div>
+									<div style={{ height: '17px' }} />
 								</Accordion>
 							)}
 						</div>

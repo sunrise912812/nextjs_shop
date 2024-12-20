@@ -17,7 +17,7 @@ export const PartSlider = ({ images }: { images: string[] }): JSX.Element => {
 		speed: 500,
 		arrows: false,
 		slidesToScroll: 1,
-	}
+	};
 
 	return (
 		<Slider {...settings} className={styles.part__slider}>
@@ -32,5 +32,5 @@ export const PartSlider = ({ images }: { images: string[] }): JSX.Element => {
 				</div>
 			))}
 		</Slider>
-	)
-}
+	);
+};

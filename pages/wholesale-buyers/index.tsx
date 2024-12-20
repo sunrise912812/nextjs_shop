@@ -7,7 +7,7 @@ import { useCallback } from 'react'
 function WholesaleBuyers() {
 	const getDefaultTextGenerator = useCallback(() => 'Оптовым покупателям', [])
 
-	const getTextGenerator = useCallback((param: string) => ({})[param], [])
+	const getTextGenerator = useCallback((param: string) => param, [])
 
 	return (
 		<>
